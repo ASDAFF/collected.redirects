@@ -4,7 +4,7 @@
  */
 
 if (!check_bitrix_sessid()) return;
-include(GetLangFileName(__FILE__));
+IncludeModuleLangFile(__FILE__);
 
 $sModuleId = "collected.redirects";
 $fileBackupName = '.htaccess-'.$sModuleId.'.bac';
