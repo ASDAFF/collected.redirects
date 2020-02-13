@@ -1,12 +1,12 @@
 <? if (!check_bitrix_sessid()) return; ?>
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 global $APPLICATION;
 //var_dump($savedata);exit;
-$sModuleId = "redirects.master";
+$sModuleId = "collected.redirects";
 $DB = CDatabase::GetModuleConnection($sModuleId);
 
 $errors = false;
@@ -18,7 +18,7 @@ DeleteDirFilesEx("/bitrix/images/seo2_redirects");
 DeleteDirFiles($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/" . $sModuleId . "/install/themes/.default/", $_SERVER["DOCUMENT_ROOT"] . "/bitrix/themes/.default/");
 DeleteDirFilesEx("/bitrix/themes/.default/icons/seo2_redirects");
 
-UnRegisterModuleDependences('main', 'OnBeforeProlog', "redirects.master", 'seo2Redirects', 'handlerOnBeforeProlog');
+UnRegisterModuleDependences('main', 'OnBeforeProlog', "collected.redirects", 'seo2Redirects', 'handlerOnBeforeProlog');
 
 $DB->Query("DROP TABLE IF EXISTS seo2_redirects_404");
 $DB->Query("DROP TABLE IF EXISTS seo2_redirects_rules");

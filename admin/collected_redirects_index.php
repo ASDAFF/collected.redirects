@@ -1,9 +1,9 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
-$sModuleId = "redirects.master";
+$sModuleId = "collected.redirects";
 require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php");
 require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/" . $sModuleId . "/include.php");
 IncludeModuleLangFile(__FILE__);

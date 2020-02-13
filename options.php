@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
 $module_id = seo2Redirects::MODULE_ID;
 global $MESS;
 IncludeModuleLangFile($_SERVER['DOCUMENT_ROOT'].BX_ROOT.'/modules/main/options.php');
@@ -70,7 +74,7 @@ while($arr = $resGroups->Fetch()) {
     $arGroups['REFERENCE'][] = '[' . $arr['ID'] . '] ' . $arr['NAME'];
     $arGroups['REFERENCE_ID'][] = $arr['ID'];
 }
-//arSelectedGroups = explode(',', COption::GetOptionString('seo2_asdaff', 'seo2_groups_to_send',''));
+//arSelectedGroups = explode(',', COption::GetOptionString('seo2_collected', 'seo2_groups_to_send',''));
 
 if(count($arMsg))
 {
@@ -91,6 +95,7 @@ $tabControl->Begin();
 </style>
 <form method="post" action="<?echo $APPLICATION->GetCurPage()?>?mid=<?=urlencode($mid)?>&amp;lang=<?=LANGUAGE_ID?>"><?
 
+// �������� ���������
 $tabControl->BeginNextTab();
 
 if (is_array($arAllOptions)) {
@@ -128,6 +133,7 @@ if (is_array($arAllOptions)) {
     }
 }
 
+// ����� �������
 $tabControl->BeginNextTab();
 ?>
 <?//require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/admin/group_rights.php");?>

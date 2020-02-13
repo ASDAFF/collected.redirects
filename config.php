@@ -1,12 +1,12 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 global $DBType;
 
 CModule::AddAutoloadClasses(
-	"redirects.master",
+	"collected.redirects",
 	array(
 		"seo2RedirectsRulesDB" => "classes/$DBType/seo2_redirects_rules.php",
         "seo2Redirects404DB" => "classes/$DBType/seo2_redirects_404.php",

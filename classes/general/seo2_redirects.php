@@ -1,10 +1,10 @@
 <?php
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 class seo2Redirects {
-    const MODULE_ID = 'redirects.master';
+    const MODULE_ID = 'collected.redirects';
     
     static public function handlerOnBeforeProlog() {
         global $APPLICATION;

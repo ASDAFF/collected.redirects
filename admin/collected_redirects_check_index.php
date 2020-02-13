@@ -1,12 +1,12 @@
 <?php
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_admin_before.php");
 require_once($_SERVER["DOCUMENT_ROOT"] . BX_ROOT . "/modules/main/prolog.php");
 
-$moduleID = 'redirects.master';
+$moduleID = 'collected.redirects';
 
 if(!CModule::IncludeModule($moduleID)) die('no module '.$moduleID);
 
@@ -207,7 +207,7 @@ function DoNext(NS)
 	{
 		ShowWaitWindow();
 		BX.ajax.post(
-			'redirects_master_check_index.php?'+queryString,
+			'collected_redirects_check_index.php?'+queryString,
 			NS,
 			function(result){
 				document.getElementById('reindex_result_div').innerHTML = result;

@@ -1,9 +1,9 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
-$sModuleId = "redirects.master";
+$sModuleId = "collected.redirects";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_admin_before.php");
 require_once($_SERVER["DOCUMENT_ROOT"] . BX_ROOT . "/modules/main/prolog.php");
 
@@ -116,7 +116,7 @@ $arVisibleColumns = $lAdmin->GetVisibleHeaderColumns();
 
 // MAKE THE LIST
 while ($arResult = $dbResultList->NavNext(true, "f_")) {
-	$row = & $lAdmin->AddRow($f_ID, $arResult, "redirects_master_edit.php?ID=" . UrlEncode($arResult["ID"]) . "&lang=" . LANG, GetMessage("MURL_EDIT"));
+	$row = & $lAdmin->AddRow($f_ID, $arResult, "collected_redirects_edit.php?ID=" . UrlEncode($arResult["ID"]) . "&lang=" . LANG, GetMessage("MURL_EDIT"));
 
     //$row->AddField("ID", $f_ID);
     $row->AddField("SITE_ID", $f_SITE_ID);
@@ -129,7 +129,7 @@ while ($arResult = $dbResultList->NavNext(true, "f_")) {
 
 	//CONTEXT MENU
 	$arActions = Array();
-	$arActions[] = array("ICON" => "edit", "TEXT" => GetMessage("MURL_EDIT"), "ACTION" => $lAdmin->ActionRedirect("redirects_master_edit.php?ID=" . UrlEncode($arResult["ID"]) . "&lang=" . LANG), "DEFAULT" => true);
+	$arActions[] = array("ICON" => "edit", "TEXT" => GetMessage("MURL_EDIT"), "ACTION" => $lAdmin->ActionRedirect("collected_redirects_edit.php?ID=" . UrlEncode($arResult["ID"]) . "&lang=" . LANG), "DEFAULT" => true);
 	if ($isAdmin)
 		$arActions[] = array("ICON" => "delete", "TEXT" => GetMessage("MURL_DELETE"), "ACTION" => "if(confirm('" . GetMessage("MURL_DELETE_CONF") . "')) " . $lAdmin->ActionDoGroup(UrlEncode($arResult["ID"]), "delete"));
 
@@ -161,7 +161,7 @@ $dbRes = CLang::GetList(($b = "sort"), ($o = "asc"));
 while (($arRes = $dbRes->Fetch())) {
 	$arDDMenu[] = array(
 			"TEXT" => htmlspecialchars("[" . $arRes["LID"] . "] " . $arRes["NAME"]),
-			"ACTION" => "window.location = 'redirects_master_edit.php?ADD=Y&lang=" . urlencode(LANG) . "&site_id=" . $arRes["LID"] . "';"
+			"ACTION" => "window.location = 'collected_redirects_edit.php?ADD=Y&lang=" . urlencode(LANG) . "&site_id=" . $arRes["LID"] . "';"
 	);
 }
 

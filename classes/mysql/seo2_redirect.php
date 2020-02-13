@@ -1,11 +1,11 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 class SEO2_REDIRECT_CLASS {
     
-    const MODULE_ID = 'redirects.master';
+    const MODULE_ID = 'collected.redirects';
     
 //======================================================================================
 	/**
@@ -17,7 +17,7 @@ class SEO2_REDIRECT_CLASS {
 	static function GetList($arFilter = array(), $arOrder = array()) {
 		global $APPLICATION;
         
-        $DB = CDatabase::GetModuleConnection('redirects.master');
+        $DB = CDatabase::GetModuleConnection('collected.redirects');
         
         $strSql = "
             SELECT 
@@ -84,7 +84,7 @@ class SEO2_REDIRECT_CLASS {
 	 */
 	static function Add($arFields) {
 
-        $DB = $moduleDB = CDatabase::GetModuleConnection('redirects.master');
+        $DB = $moduleDB = CDatabase::GetModuleConnection('collected.redirects');
         
 		if (!array_key_exists("SITE_ID", $arFields))
 			$arFields["SITE_ID"] = SITE_ID;
@@ -116,7 +116,7 @@ class SEO2_REDIRECT_CLASS {
 	 * @ Param $ arFilter = array ('OLD_LINK','NEW_LINK'=>,' DATE_TIME_CREATE' => '30 .09.2010 12:23 ',' ACTIVE '=>,' COMMENT '=>)
 	 */
 	static function Update($ID, $arFields) {
-		$DB = $moduleDB = CDatabase::GetModuleConnection('redirects.master');
+		$DB = $moduleDB = CDatabase::GetModuleConnection('collected.redirects');
         
 		if (!array_key_exists("SITE_ID", $arFields))
 			$arFields["SITE_ID"] = SITE_ID;
@@ -163,7 +163,7 @@ class SEO2_REDIRECT_CLASS {
      * Refresh redirect rules in .htaccess
      */
     static function generateRules() {
-        $DB = CDatabase::GetModuleConnection('redirects.master');
+        $DB = CDatabase::GetModuleConnection('collected.redirects');
         
         $resSites = CSite::GetList(($v1="sort"), ($v2="asc"));
         while($site = $resSites->Fetch()) {
@@ -175,8 +175,8 @@ class SEO2_REDIRECT_CLASS {
             $handleTmp = fopen($tmpHtaccessPath, "w"); //tmpfile();
             
             if(file_exists($htaccessPath) && $handle && $handleTmp) {
-                $blockStart = "# >> automatically generated redirects for module redirects.master (dont modify!)\n";
-                $blockEnd = "# << automatically generated redirects for module redirects.master (dont modify!)\n";
+                $blockStart = "# >> automatically generated redirects for module collected.redirect (dont modify!)\n";
+                $blockEnd = "# << automatically generated redirects for module collected.redirect (dont modify!)\n";
                 
                 $inside = false;
                 while (($buffer = fgets($handle)) !== false) {
@@ -211,7 +211,7 @@ class SEO2_REDIRECT_CLASS {
     }
     
     static function GetCountRules() {
-        $DB = CDatabase::GetModuleConnection('redirects.master');
+        $DB = CDatabase::GetModuleConnection('collected.redirects');
         
         $rs = $DB->Query("SELECT COUNT(*) as CNT FROM seo2_redirects", false, $err_mess.__LINE__);
         $data = $rs->Fetch();

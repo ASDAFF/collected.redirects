@@ -1,9 +1,9 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
-$sModuleId = "redirects.master";
+$sModuleId = "collected.redirects";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_admin_before.php");
 require_once($_SERVER["DOCUMENT_ROOT"] . BX_ROOT . "/modules/main/prolog.php");
 
@@ -67,7 +67,7 @@ $userfile = $_FILES['userfile']['name'];
 $aFile = explode('.', $userfile); //check csv
 $sExtension = end($aFile);
 if($sExtension != "csv") {
-   LocalRedirect("/bitrix/admin/redirects_master_list.php?lang=" . LANG . "&filter_site_id=" . UrlEncode($site_id) . "&" . GetFilterParams("filter_", false));
+   LocalRedirect("/bitrix/admin/collected_redirects_list.php?lang=" . LANG . "&filter_site_id=" . UrlEncode($site_id) . "&" . GetFilterParams("filter_", false));
    exit;
  }
 //import csv from array
@@ -97,7 +97,7 @@ $UR = 'N';
 							));
 
 }
-	LocalRedirect("/bitrix/admin/redirects_master_list.php?lang=" . LANG . "&filter_site_id=" . UrlEncode($site_id) . "&" . GetFilterParams("filter_", false));
+	LocalRedirect("/bitrix/admin/collected_redirects_list.php?lang=" . LANG . "&filter_site_id=" . UrlEncode($site_id) . "&" . GetFilterParams("filter_", false));
 
 }
 }

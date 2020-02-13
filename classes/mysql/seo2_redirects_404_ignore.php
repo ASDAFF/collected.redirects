@@ -1,11 +1,11 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 class seo2Redirects404IgnoreDB {
     
-    const MODULE_ID = 'redirects.master';
+    const MODULE_ID = 'collected.redirects';
     
 //======================================================================================
 	/**
@@ -17,7 +17,7 @@ class seo2Redirects404IgnoreDB {
 	static function GetList($arFilter = array(), $arOrder = array()) {
 		global $APPLICATION;
         
-        $DB = CDatabase::GetModuleConnection('redirects.master');
+        $DB = CDatabase::GetModuleConnection('collected.redirects');
         
         $strSql = "
             SELECT 
@@ -77,7 +77,7 @@ class seo2Redirects404IgnoreDB {
 	 */
 	static function Add($arFields) {
 
-        $DB = $moduleDB = CDatabase::GetModuleConnection('redirects.master');
+        $DB = $moduleDB = CDatabase::GetModuleConnection('collected.redirects');
         
 		if (!array_key_exists("SITE_ID", $arFields))
 			$arFields["SITE_ID"] = SITE_ID;
@@ -106,7 +106,7 @@ class seo2Redirects404IgnoreDB {
 	 */
 	static function Update($ID, $arFields) {
         
-		$DB = $moduleDB = CDatabase::GetModuleConnection('redirects.master');
+		$DB = $moduleDB = CDatabase::GetModuleConnection('collected.redirects');
         
 		if (!array_key_exists("SITE_ID", $arFields))
 			$arFields["SITE_ID"] = SITE_ID;

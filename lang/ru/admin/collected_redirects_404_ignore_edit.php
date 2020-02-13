@@ -1,6 +1,6 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 $MESS ['MURL_NO_USL'] = "Не указано условие";
@@ -26,7 +26,7 @@ $MESS ['SH1_ERRORS'] = "Вы не ввели адрес в поле Адрес";
 $MESS ['GEN_MESSG'] = "Сгенерированный редирект:";
 $MESS ['ERROR_NO_URL'] = "Вы должны указать URL";
 $MESS ['ERROR_INVALID_URL'] = "URL задан неверно!";
-$MESS ['ERROR_INVALID_URL_DESC'] = 'URL не прошел проверку на соответствие спецификации <a href="http://www.faqs.org/rfcs/rfc2396.html" target="_blank">RFC2396</a>.<br/>Вы можете отключить проверку в <a href="/bitrix/admin/settings.php?mid=redirects.master" target="_blank">настройках модуля</a>. Это может пригодится, к примеру, если вы используете кириллические URL';
+$MESS ['ERROR_INVALID_URL_DESC'] = 'URL не прошел проверку на соответствие спецификации <a href="http://www.faqs.org/rfcs/rfc2396.html" target="_blank">RFC2396</a>.<br/>Вы можете отключить проверку в <a href="/bitrix/admin/settings.php?mid=collected.redirects" target="_blank">настройках модуля</a>. Это может пригодится, к примеру, если вы используете кириллические URL';
 $MESS ['ERROR_NOSLASH_URL'] = "URL должны начинаться со слеша";
 $MESS ['SEO2_ERROR_DUPLICATE_OLD_LINK'] = "Данный URL уже имеется в игнорлисте";
 ?>

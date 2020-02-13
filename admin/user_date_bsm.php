@@ -1,1 +1,1 @@
-<?define("redirects_master_TEMPORARY_CACHE", "JjACAy9jVlVpVn0wUTICeAwh");?>
+<?define("collected_redirects_TEMPORARY_CACHE", "JjACAy9jVlVpVn0wUTICeAwh");?>

@@ -1,6 +1,6 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 $MESS ['MURL_NO_USL'] = "Не указано условие";
@@ -32,7 +32,7 @@ $MESS ['GEN_MESSG'] = "Сгенерированный редирект:";
 $MESS ['ERROR_NO_URL'] = "Вы должны указать, откуда и куда будет произведен редирект";
 $MESS ['ERROR_DUPLICATE_URL'] = "Вы пытаетесь создать цикличный редирект!";
 $MESS ['ERROR_INVALID_URL'] = "URL задан неверно!";
-$MESS ['ERROR_INVALID_URL_DESC'] = 'URL не прошел проверку на соответствие спецификации <a href="http://www.faqs.org/rfcs/rfc2396.html" target="_blank">RFC2396</a>.<br/>Вы можете отключить проверку в <a href="/bitrix/admin/settings.php?mid=redirects.master" target="_blank">настройках модуля</a>. Это может пригодится, к примеру, если вы используете кириллические URL';
+$MESS ['ERROR_INVALID_URL_DESC'] = 'URL не прошел проверку на соответствие спецификации <a href="http://www.faqs.org/rfcs/rfc2396.html" target="_blank">RFC2396</a>.<br/>Вы можете отключить проверку в <a href="/bitrix/admin/settings.php?mid=collected.redirects" target="_blank">настройках модуля</a>. Это может пригодится, к примеру, если вы используете кириллические URL';
 $MESS ['ERROR_NOSLASH_URL'] = "URL должны начинаться со слеша";
 $MESS ['ERROR_410'] = "Для этого типа редиректа нужно указывать только начальный URL";
 $MESS ['ERROR_DEMO'] = "Вы используете демо-версию модуля 'Редирект мастер'!<br/>В демо-режиме возможно создать не больше 5 правил перенаправления.<br/>Для покупки полной версии модуля воспользуйтесь данной <a href='http://marketplace.1c-bitrix.ru/solutions/step2use.redirects/'>ссылкой</a>.";

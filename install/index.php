@@ -1,6 +1,6 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 global $MESS;
@@ -9,10 +9,10 @@ $strPath2Lang = substr($strPath2Lang, 0, strlen($strPath2Lang)-strlen("/install/
 include(GetLangFileName($strPath2Lang."/lang/", "/install/index.php"));
 
 
-Class redirects_master extends CModule
+Class collected_redirects extends CModule
 {
-    const MODULE_ID = 'redirects.master';
-	var $MODULE_ID = "redirects.master";
+    const MODULE_ID = 'collected.redirects';
+	var $MODULE_ID = "collected.redirects";
 	var $MODULE_VERSION;
 	var $MODULE_VERSION_DATE;
 	var $MODULE_NAME;
@@ -20,7 +20,7 @@ Class redirects_master extends CModule
 	var $MODULE_CSS;
 	var $MODULE_GROUP_RIGHTS = "Y";
 
-	function redirects_master()
+	function collected_redirects()
 	{
 		$arModuleVersion = array();
 
@@ -79,7 +79,7 @@ Class redirects_master extends CModule
 		else
 			$DB = $GLOBALS["DB"];
         
-        $this->errors = $DB->RunSQLBatch($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/redirects.master/install/db/".strtolower($DBType)."/install.sql");
+        $this->errors = $DB->RunSQLBatch($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/collected.redirects/install/db/".strtolower($DBType)."/install.sql");
         if($this->errors !== false) {
 			$APPLICATION->ThrowException(implode("<br>", $this->errors));
 			return false;

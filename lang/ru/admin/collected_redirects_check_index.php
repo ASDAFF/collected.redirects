@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 $MESS['SEO2_CHECK_INDEX'] = 'Проверить доступность страниц из индекса поисковых систем';
 $MESS['SEO2_REINDEX_RESULT_TITLE'] = 'Прогон по индексу...';
-$MESS['SEO2_REINDEX_RESULT_TITLE_END'] = 'Прогон по индексу завершен! <a href="redirects_master_404_list.php">Просмотреть переходы по битым url</a>';
+$MESS['SEO2_REINDEX_RESULT_TITLE_END'] = 'Прогон по индексу завершен! <a href="collected_redirects_404_list.php">Просмотреть переходы по битым url</a>';
 $MESS['SEO2_REINDEX_RESULT'] = 'Последняя проверенная страница выдачи: #PAGE#<br/>Проверено ссылок из индекса: #CNT#<br/>Последняя проверенная ссылка: #LAST#';
 $MESS['SEO2_SE'] = 'Поисковая система';
 $MESS['SEO2_YANDEX'] = 'Яндекс';

@@ -1,12 +1,12 @@
 <?
 /**
- * Copyright (c) 2019 Created by ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 13/2/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 if (!check_bitrix_sessid()) return;
 include(GetLangFileName(__FILE__));
 
-$sModuleId = "redirects.master";
+$sModuleId = "collected.redirects";
 $fileBackupName = '.htaccess-'.$sModuleId.'.bac';
 
 //Module Register
@@ -17,7 +17,7 @@ CopyDirFiles($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/" . $sModuleId . "/ins
 CopyDirFiles($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/" . $sModuleId . "/install/images/", $_SERVER["DOCUMENT_ROOT"] . "/bitrix/images/seo2_redirects/", true, true);
 CopyDirFiles($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/" . $sModuleId . "/install/themes/", $_SERVER["DOCUMENT_ROOT"] . "/bitrix/themes/", true, true);
 
-RegisterModuleDependences("main", "OnBeforeProlog", "redirects.master", "seo2Redirects", "handlerOnBeforeProlog", "100");
+RegisterModuleDependences("main", "OnBeforeProlog", "collected.redirects", "seo2Redirects", "handlerOnBeforeProlog", "100");
 
 //-----------------------------------------------------------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ else
 	));
 ?>
 
-<form action="/bitrix/admin/redirects_master_index.php">
+<form action="/bitrix/admin/collected_redirects_index.php">
 	<input type="hidden" name="lang" value="<? echo LANG ?>">
     <input type="submit" name="" value="<? echo GetMessage("SEO2_REDIRECT_GO_TO_MODULE") ?>">
 </form>
